@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+        android:id="@+id/control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:weightSum="2">
+        <Button
+	        android:id="@+id/start"
+	        style="?android:attr/buttonStyleSmall"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Start"
+	        android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/stop"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:enabled="false"
+            android:layout_weight="1" />
+    </LinearLayout>
+    
+	<com.amap.api.maps2d.MapView 
+	   xmlns:android="http://schemas.android.com/apk/res/android"
+	   android:id="@+id/map"
+	   android:layout_below="@+id/control_panel"
+	   android:layout_width="fill_parent"
+	   android:layout_height="fill_parent" />
+
+</RelativeLayout>
